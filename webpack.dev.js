@@ -16,6 +16,14 @@ module.exports = merge(common, {
     },
     plugins: [
         new FriendlyErrorsWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            Popper: 'popper.js',
+            jQuery: 'jquery',
+            // In case you imported plugins individually, you must also require them here:
+            Util: "exports-loader?Util!bootstrap/js/dist/util",
+            Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
+        }),
         new ErrorOverlayPlugin(),
         new PrettierPlugin({
             parser: "babylon",
