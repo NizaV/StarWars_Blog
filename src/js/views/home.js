@@ -9,17 +9,7 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<ItemHolder title={"Characters"} cardsData={store.people} />
-			<ItemHolder
-				title={"Planets"}
-				cardsData={[
-					{
-						title: "Earth"
-					},
-					{
-						title: "Mars"
-					}
-				]}
-			/>
+			<ItemHolder title={"Planets"} cardsData={store.planets} />
 		</div>
 	);
 };
