@@ -7,15 +7,15 @@ export const Single = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[props.match.params.theid].title}</h1>
-
+			<div className="d-flex">
+				<img className="card-img-top" src="..." alt="Card image cap" />
+			</div>
+			<div className="d-flex">
+				<h1 className="display-4">{"Card title"}</h1>
+				<p className="lead">{"Some type of card description"}</p>
+			</div>
 			<hr className="my-4" />
-
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+			<p>{"This will be card info"}</p>
 		</div>
 	);
 };

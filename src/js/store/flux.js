@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			people: [],
-			planets: []
+			planets: [],
+			starships: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -35,6 +36,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(resjson => {
 						setStore({
 							planets: resjson.results
+						});
+					});
+			},
+			getStarships: () => {
+				fetch("https://swapi.dev/api/starships/", {
+					method: "GET"
+				})
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(resjson => {
+						setStore({
+							starships: resjson.results
 						});
 					});
 			},

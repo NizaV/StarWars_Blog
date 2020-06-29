@@ -6,7 +6,7 @@ export const ItemHolder = props => {
 	return (
 		<>
 			<div>{props.title}</div>
-			<div className="d-flex flex-row justify-content-between overflow-auto">
+			<div className="d-flex justify-content-between overflow-auto">
 				{props.cardsData.map((cardData, index) => {
 					return <Card data={cardData} key={index} />;
 				})}
