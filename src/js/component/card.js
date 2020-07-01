@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export const Card = props => {
 	return (
@@ -7,20 +8,23 @@ export const Card = props => {
 			<img className="card-img-top" src="..." alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title">{props.data.name}</h5>
-				<p className="card-text">
-					{"gender" in props.data && <p>{`Gender: ${props.data.gender}`}</p>}
-					{"hair_color" in props.data && <p>{`Hair Color: ${props.data.hair_color}`}</p>}
-					{"eye_color" in props.data && <p>{`Eye-Color: ${props.data.eye_color}`}</p>}
-					{"population" in props.data && <p>{`Population: ${props.data.population}`}</p>}
-					{"climate" in props.data && <p>{`Climate: ${props.data.climate}`}</p>}
-					{"terrain" in props.data && <p>{`Terrain: ${props.data.terrain}`}</p>}
-					{"model" in props.data && <p>{`Model: ${props.data.model}`}</p>}
-					{"manufacturer" in props.data && <p>{`Manufacturer: ${props.data.manufacturer}`}</p>}
-					{"passengers" in props.data && <p>{`Passengers: ${props.data.passengers}`}</p>}
-				</p>
-				<a href="#" className="btn btn-primary">
-					{"Learn more!"}
-				</a>
+				{"gender" in props.data && <p className="card-text">{`Gender: ${props.data.gender}`}</p>}
+				{"hair_color" in props.data && <p className="card-text">{`Hair Color: ${props.data.hair_color}`}</p>}
+				{"eye_color" in props.data && <p className="card-text">{`Eye-Color: ${props.data.eye_color}`}</p>}
+				{"population" in props.data && <p className="card-text">{`Population: ${props.data.population}`}</p>}
+				{"climate" in props.data && <p className="card-text">{`Climate: ${props.data.climate}`}</p>}
+				{"terrain" in props.data && <p className="card-text">{`Terrain: ${props.data.terrain}`}</p>}
+				{"model" in props.data && <p className="card-text">{`Model: ${props.data.model}`}</p>}
+				{"manufacturer" in props.data && (
+					<p className="card-text">{`Manufacturer: ${props.data.manufacturer}`}</p>
+				)}
+				{"passengers" in props.data && <p className="card-text">{`Passengers: ${props.data.passengers}`}</p>}
+				<div>
+					<Link to={`/single/${props.data.url.replace("http://swapi.dev/api/", "")}`}>{"Learn more!"}</Link>
+					<button type="button" className="btn btn-primary">
+						<i />
+					</button>
+				</div>
 			</div>
 		</div>
 	);
