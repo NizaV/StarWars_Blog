@@ -27,19 +27,23 @@ export const Navbar = () => {
 				</button>
 				<div className="dropdown-menu ml-auto dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 					<>
-						<ul className="w-25">
+						<ul className="w-25 pl-0">
 							{store.favorites &&
 								store.favorites.map((person, index) => {
 									// if (person.isfav) {
 									return (
 										<li key={index} className="dropit dropdown-item" href="#">
 											<div className="d-flex flex-row">
-												<p className="mr-4">{person} </p>
-												<button
-													onClick={() => actions.deleteFav(index, "people")}
-													className="btndelete pull-right btn-xs btn btn-danger py-0 ml-auto h-25">
-													<i className="fas fa-trash" />
-												</button>
+												<div className="">
+													<p className="mr-4">{person} </p>
+												</div>
+												<div className="ml-auto">
+													<button
+														onClick={() => actions.deleteFav(index, "people")}
+														className="btndelete pull-right btn-xs btn btn-danger py-0">
+														<i className="fas fa-trash" />
+													</button>
+												</div>
 											</div>
 										</li>
 									);
