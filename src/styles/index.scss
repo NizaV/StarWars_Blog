@@ -1,3 +1,37 @@
 /* 
     General Styles
 */
+
+.holder-text > h2 {
+    text-decoration: underline solid #15f2fd;
+    margin-top: 1em;
+}
+
+.learn-color > a {
+    color: white;
+}
+.learn-color {
+    background: #EB212E;
+}
+
+.property-under {
+    text-decoration: underline solid #EB212E;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.fav-icn {
+    font-size: 2em;
+    color: #15f2fd;
+}
+
+.fav-button:active,
+.fav-button:hover {
+    border: 2px solid #15f2fd;
+}
+
+.red-saber {
+    background: #EB212E;
+}
