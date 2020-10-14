@@ -95,6 +95,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				var arrayCategory = name;
 				setStore({ favorites: [...store.favorites, arrayCategory] });
+			},
+			deleteFav: (index, category) => {
+				const store = getStore();
+				const newArray = store.favorites.filter((bubu, i) => i != index); // the second parameter is always the index. Check here https://www.w3schools.com/jsref/jsref_filter.asp
+				// const favArray = [...store.favorites];
+				// const favToRemove = store.favorites.filter(name => !favArray.includes(name));
+				console.log(newArray);
+				setStore({ favorites: newArray });
 			}
 		}
 	};
