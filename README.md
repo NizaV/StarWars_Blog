@@ -11,7 +11,7 @@
 
 Presenting the front-end portion of a Star Wars Blog interactive web application :computer: that provides access to a Star Wars fandom API! Meaning that you have access to a large amount of Star Wars information. It also includes a favorite list that allows you to store your favorite cards :raised_hands:. It incorporates JavaScript, Flux, Props, Bootstrap, and SCSS to build a convenient and user-friendly application. The possibilities are endless with access to so much information :rocket: , may the force be with you.
 
-## Check it out!
+## Check it out
 👉 https://nizav.github.io/StarWars_Blog/
 
 # Demo
